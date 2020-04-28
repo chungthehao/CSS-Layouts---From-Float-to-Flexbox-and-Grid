@@ -7,23 +7,22 @@
 
     <style>
       .container {
-        /* width: 800px; */
+        width: 800px;
+        font-size: 0; /* The font-size not only applies to letters and numbers but also applies to space characters.  */
       }
       div {
         background: lightgreen;
         height: 100px;
         width: 200px;
         display: inline-block;
-
-        margin-left: -4px;
+        font-size: 16px; /* font-size is an inheritable style, have to redeclare to override this inherited style. */
       }
       span {
         background: lightblue;
         height: 100px;
         width: 200px;
         display: inline-block;
-
-        margin-left: -4px;
+        font-size: 16px; /* font-size is an inheritable style, have to redeclare to override this inherited style. */
       }
     </style>
   </head>
