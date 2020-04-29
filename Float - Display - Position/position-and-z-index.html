@@ -15,14 +15,14 @@
       }
       header {
         background: lightblue;
-        /*   margin-top: 64px; */
+        margin-top: 64px;
       }
       nav {
         background: darkseagreen;
-        /*   position: fixed; */
-        /*   z-index: 100; */
-        /*   width: 100%; */
-        /*   top: 0; */
+        position: fixed; /* Tách ra khỏi flow bình thường của page; Cái eles dưới dồn lên; Chưa chỉ định top-left-right-bottom thì ở nguyên vị trí cũ sau khi tách layer */
+        z-index: 100;
+        width: 100%; /* Position fixed (or absolute) nếu ko chỉ rõ width thì nó thì co về kích thước chỉ chứa đủ content */
+        top: 0;
       }
       main {
         background: khaki;
