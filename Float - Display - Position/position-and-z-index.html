@@ -26,7 +26,7 @@
       }
       main {
         background: khaki;
-        /*   position: relative; */
+        position: relative;
       }
       footer {
         background: silver;
@@ -38,16 +38,16 @@
       }
       .relative {
         background: red;
-        position: relative; /* So với vị trí hiện tại của nó; Ko hề ảnh hưởng tới elements khác */
+        position: relative; /* So với vị trí hiện tại của nó (vẫn trong layout flow); Ko hề ảnh hưởng tới elements khác */
         left: 50px;
         bottom: 20px;
       }
       .absolute {
         background: green;
-        /*   position: absolute; */
-        /*   z-index: 1; */
-        /*   top: 20px; */
-        /*   right: 20px; */
+        position: absolute; /* Ra khỏi layout flow (own layer); Ele phía sau nó sẽ move up to fill the now empty spot; Khi chưa chỉ ra left-right-top-bottom thì ele tách ra layout riêng rồi ở yên đó; Khi đã chỉ ra left-right-top-bottom thì sẽ so với relative gần nhất (ko có ai hết thì là body). */
+        z-index: 1;
+        top: 20px;
+        right: 20px;
       }
 
       @media (max-width: 600px) {
