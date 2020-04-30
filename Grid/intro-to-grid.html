@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create a basic Grid layout</title>
+
+    <style>
+      body {
+        padding: 20px;
+      }
+      .grid-container {
+        border: 5px solid black;
+        font-family: avenir, sans-serif;
+        font-weight: bold;
+        display: grid;
+        grid-template-columns: 2fr repeat(2, 1fr);
+        grid-template-rows: 100px 100px;
+        gap: 10px;
+      }
+      .grid-item {
+        padding: 10px 20px;
+      }
+      .grid-item:nth-child(1) {
+        background: darkcyan;
+      }
+      .grid-item:nth-child(2) {
+        background: turquoise;
+      }
+      .grid-item:nth-child(3) {
+        background: aquamarine;
+      }
+      .grid-item:nth-child(4) {
+        background: lightgreen;
+      }
+      .grid-item:nth-child(5) {
+        background: mediumseagreen;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid-container">
+      <div class="grid-item">1</div>
+      <div class="grid-item">2</div>
+      <div class="grid-item">3</div>
+      <div class="grid-item">4</div>
+      <div class="grid-item">
+        5
+        <!--     <p>extra content Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi tempora molestias ab eum voluptates debitis numquam nostrum similique dicta consectetur. Inventore quaerat ratione a. Quasi voluptatum accusamus iusto eos assumenda!</p> -->
+      </div>
+    </div>
+  </body>
+</html>
