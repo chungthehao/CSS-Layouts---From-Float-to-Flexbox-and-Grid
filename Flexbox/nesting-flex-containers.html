@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nested Flex Boxes</title>
+
+    <style>
+      .page-wrap {
+        border: 5px solid black;
+        height: 600px; /* 350px;: shrink theo cách ko mất content, ko đảm bảo theo tỉ lệ flex-grow (chỉ áp dụng khi dư dã, khi grow thôi) */
+        display: flex;
+      }
+      aside {
+        background: lightgreen;
+        padding: 20px;
+        flex: 1 1 0;
+      }
+      main {
+        background: lightblue;
+        padding: 20px;
+        flex: 3 1 0;
+        display: flex;
+        flex-direction: column;
+      }
+      section {
+        padding: 10px 20px;
+        flex: 1 1 0;
+      }
+      section:nth-child(1) {
+        background: darkcyan;
+      }
+      section:nth-child(2) {
+        background: turquoise;
+      }
+      section:nth-child(3) {
+        background: aquamarine;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page-wrap">
+      <aside>Aside</aside>
+
+      <main>
+        Main
+        <section>
+          <p>Content 1</p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi
+            distinctio eligendi eius corporis maiores atque, explicabo
+            consequuntur mollitia accusantium minima, enim facilis itaque beatae
+            voluptatibus nostrum dicta numquam! Repudiandae, repellendus.
+          </p>
+        </section>
+        <section>
+          <p>Content 2</p>
+        </section>
+        <section>
+          <p>Content 3</p>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
